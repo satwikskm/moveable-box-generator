@@ -1,5 +1,5 @@
-import React from 'react'
-import { useEffect,useState } from 'react'
+import React, { useCallback } from 'react'
+import { useState,useEffect } from 'react'
 import './Box.css'
 
 const Box = (props) => {
@@ -9,7 +9,7 @@ const Box = (props) => {
     const[id,setId]=useState(0)
     const button = props.lock
 
-    const key =(e)=>{
+    const key =useCallback(e=>{
 
         console.log(e)
         console.log("event")
@@ -39,7 +39,7 @@ const Box = (props) => {
                 props.delete(props.id)
             }
         }
-    }
+    })
 
     const moveBox = (a,id)=>{
 
@@ -148,6 +148,7 @@ const Box = (props) => {
             if(element && button){
                 window.addEventListener('keydown', key);
                 console.log(id)
+                
 
             }
                

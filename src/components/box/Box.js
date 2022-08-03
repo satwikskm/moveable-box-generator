@@ -20,11 +20,11 @@ const Box = (props) => {
              console.log("move up")
             moveBox("top",id)
         }
-        else if(e.keyCode === 40 || e.keyCode == 83){
+        else if(e.keyCode === 40 || e.keyCode === 83){
             console.log("move down")
             moveBox("bottom",id)
         }
-        else if(e.keyCode === 37 || e.keyCode == 65){
+        else if(e.keyCode === 37 || e.keyCode === 65){
             console.log("move left")
             moveBox("left",id)
         }
@@ -45,7 +45,7 @@ const Box = (props) => {
 
 //      if(x_axis >= -55 && y_axis >= -45 && x_axis <=1080 && y_axis <=20){  
         if(a === 'right'){
-            let move =0
+            
             setX(x_axis + 20)
             console.log("right")
             console.log(x_axis,y_axis)
@@ -161,7 +161,7 @@ const Box = (props) => {
               };
         
         
-    },[key])
+    },[key,element,button,id])
     
   return (
     <div className='box' id={`box-${props.id}`} 

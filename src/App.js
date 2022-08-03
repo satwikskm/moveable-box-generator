@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import Screen from './components/screen/Screen';
 import './App.css';
 

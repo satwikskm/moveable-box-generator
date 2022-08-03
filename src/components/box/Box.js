@@ -9,6 +9,55 @@ const Box = (props) => {
     const[id,setId]=useState(0)
     const button = props.lock
 
+    const moveBox = useCallback((a,id)=>{
+
+        //      if(x_axis >= -55 && y_axis >= -45 && x_axis <=1080 && y_axis <=20){  
+                if(a === 'right'){
+                    
+                    setX(x_axis + 20)
+                    console.log("right")
+                    console.log(x_axis,y_axis)
+                   document.getElementById(`box-${id}`).style.transform = `translate(${x_axis}px,${y_axis}px)`
+                    
+                }
+                else if(a === 'left'){
+                    setX(x_axis-20)
+                    console.log(x_axis,y_axis)
+                   document.getElementById(`box-${id}`).style.transform = `translate(${x_axis}px,${y_axis}px)`
+                    
+                }
+                else if(a === 'top'){
+                    setY(y_axis-20)
+                    console.log(x_axis,y_axis)
+                    document.getElementById(`box-${id}`).style.transform = `translate(${x_axis}px,${y_axis}px)`            
+                }
+                else if(a === 'bottom'){
+                    setY(y_axis+20)
+                    console.log("bottom")
+                    console.log(x_axis,y_axis)
+                    document.getElementById(`box-${id}`).style.transform =    `translate(${x_axis}px,${y_axis}px)`               
+                }
+        //    }
+        //    else{
+        //        if(x_axis <= -55){
+        //            setX(x_axis + 55)
+        //
+        //        }
+        //        if(y_axis <= -45){
+        //            setY(y_axis + 45)
+        //        }
+        //        if(x_axis >= 1080){
+        //            setY(x_axis - 1080)
+        //        }
+        //        if(y_axis >=20){
+        //            setY(y_axis -20)
+        //        }
+               
+                
+        //    }
+        
+            },[x_axis,y_axis])
+
     const key =useCallback(e=>{
 
         console.log(e)
@@ -39,56 +88,9 @@ const Box = (props) => {
                 props.delete(props.id)
             }
         }
-    },[])
+    },[element,moveBox,id,props,x_axis,y_axis])
 
-    const moveBox = (a,id)=>{
-
-//      if(x_axis >= -55 && y_axis >= -45 && x_axis <=1080 && y_axis <=20){  
-        if(a === 'right'){
-            
-            setX(x_axis + 20)
-            console.log("right")
-            console.log(x_axis,y_axis)
-           document.getElementById(`box-${id}`).style.transform = `translate(${x_axis}px,${y_axis}px)`
-            
-        }
-        else if(a === 'left'){
-            setX(x_axis-20)
-            console.log(x_axis,y_axis)
-           document.getElementById(`box-${id}`).style.transform = `translate(${x_axis}px,${y_axis}px)`
-            
-        }
-        else if(a === 'top'){
-            setY(y_axis-20)
-            console.log(x_axis,y_axis)
-            document.getElementById(`box-${id}`).style.transform = `translate(${x_axis}px,${y_axis}px)`            
-        }
-        else if(a === 'bottom'){
-            setY(y_axis+20)
-            console.log("bottom")
-            console.log(x_axis,y_axis)
-            document.getElementById(`box-${id}`).style.transform =    `translate(${x_axis}px,${y_axis}px)`               
-        }
-//    }
-//    else{
-//        if(x_axis <= -55){
-//            setX(x_axis + 55)
-//
-//        }
-//        if(y_axis <= -45){
-//            setY(y_axis + 45)
-//        }
-//        if(x_axis >= 1080){
-//            setY(x_axis - 1080)
-//        }
-//        if(y_axis >=20){
-//            setY(y_axis -20)
-//        }
-       
-        
-//    }
-
-    }
+    
     const  highlight = (id) =>{
         console.log("inside")
         setId(id)

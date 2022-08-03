@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.canvas{
+    width: 80%;
+    margin-top: 50px;
+    margin-left: 150px;
+    
+    
+}
+
+.main-screen{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    padding: 20px 20px;
+    flex-wrap: wrap;
+    border: 2px solid green;
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  overflow: hidden;
+    position: relative;
+    max-height: 100vh;
+    background: white;
+    
+}
+
+.start{
+    text-align: left;
+    color: black;
+}
+
+.btn-container{
+    margin: 30px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn{
+    padding: 20px 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    background: rgb(14, 8, 61);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    box-shadow:0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    cursor: pointer;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    color:black
+  }
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .popup .btn{
+    margin-top: 40px;
+  }
+

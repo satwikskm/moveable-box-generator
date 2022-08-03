@@ -1,4 +1,41 @@
-# Getting Started with Create React App
+
+# Box-Mobility
+
+
+
+A brief description of what this project does and who it's for
+
+
+## Installation
+
+Install box-mobility with npm
+
+```bash
+  cd moveable-box-generator
+  npm install 
+  npm start
+  
+```
+
+
+
+
+    
+## Dependency
+
+        1. React
+        2. React DOM
+## Deployment
+
+To deploy this project run
+
+```bash
+  npm run build
+```
+
+
+## React Documentation : System Generated
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -68,3 +105,51 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Roadmap
+
+- Part 1
+
+ 1. A main screen was created and react hooks were used to keep a track of boxes.
+ 2. A box component was created and rendered through the main component 
+
+- Part 2
+
+1. In the book component the main hook of adding and removing componet was passed
+2. Using useEffect hook keypress was captured .
+3. Then key and move function were defined that dealt with the movenet 
+4. A highlight function was defined to change the state of the bolck and to remeove a removelight function was defined and it it caled using double click event
+
+- Part 3
+
+1. Boundry conditions are set , but since it changes relatively with dynamic it blocks some ares .
+2. A modal wwith information was added
+
+
+
+
+## Demo
+
+Insert gif or link to demo
+
+https://www.loom.com/share/5ab368eeec894523beee1dbf91363593
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+
+## Acknowledgements
+
+ - [Youtube Video](https://www.youtube.com/watch?v=VWoQscz06Ws)
+ - [Stack overflow debugging](https://stackoverflow.com/questions/55565444/how-to-register-event-with-useeffect-hooks)
+ - [React Hooks](https://reactjs.org/docs/hooks-intro.html)
+ - [Modal Creation](https://www.w3schools.com/howto/howto_css_modals.asp)
+ 
+ 
+
+
+## Authors
+
+- [Satwik Mohanty](https://satwik-mohanty-portfolio.netlify.app/)
+
+

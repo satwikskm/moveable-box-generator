@@ -39,7 +39,7 @@ const Box = (props) => {
                 props.delete(props.id)
             }
         }
-    })
+    },[])
 
     const moveBox = (a,id)=>{
 
